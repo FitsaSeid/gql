@@ -1,9 +1,9 @@
 
 fetch("http://localhost:4000/", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-        query: `
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    query: `
             query {
                 positions {
                   position_name
@@ -14,6 +14,6 @@ fetch("http://localhost:4000/", {
                 }
               }
             `
-    })
+  })
 }).then(res => res.json())
-    .then(data => console.log(data.data))
+  .then(data => console.log(data.data))
